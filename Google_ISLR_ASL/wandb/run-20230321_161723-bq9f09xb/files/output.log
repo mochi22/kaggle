@@ -1,0 +1,7 @@
+
+(94477, 5, 240) (94477, 5, 126) (94477, 5, 126)
+Traceback (most recent call last):
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\main.py", line 72, in <module>
+    datax = np.concatenate([lip, left, right], axis=1)
+  File "<__array_function__ internals>", line 180, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 2, the array at index 0 has size 240 and the array at index 1 has size 126

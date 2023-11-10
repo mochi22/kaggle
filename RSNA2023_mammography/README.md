@@ -7,3 +7,7 @@
 
 ・FCNの実装例(https://github.com/bat67/pytorch-FCN-easiest-demo/blob/master/FCN.py)
     それを学習(https://github.com/bat67/pytorch-FCN-easiest-demo/blob/master/train.py)
+
+・https://github.com/vivek231/breast_tumor_segmentation
+
+・wavelet network(https://github.com/happymondaynkanta/Wavelet-Convolutional-Neural-Network-Using-Keras), (https://qiita.com/stktk/items/c056ad72a8d9f9226c1f)

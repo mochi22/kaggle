@@ -1,0 +1,40 @@
+(94477, 1200) (94477, 630) (94477, 630)
+(94477, 2460)
+<class 'numpy.ndarray'> <class 'numpy.ndarray'>
+[(94477, 2460), (94477,)]
+None
+[(77585, 2460), (8350, 2460), (8542, 2460)]
+[(77585,), (8350,), (8542,)]
+[[ 0.46639723  0.39453626  0.0150582  ...  0.          0.
+   0.        ]
+ [ 0.51896286  0.52219093 -0.00642547 ...  0.          0.
+   0.        ]
+ [ 0.44356254  0.54900187 -0.00612043 ...  0.01518545  0.01163128
+   0.00709107]
+ ...
+ [ 0.47957033  0.36050135  0.00273154 ...  0.          0.
+   0.        ]
+ [ 0.41948131  0.49873123  0.00305533 ...  0.          0.
+   0.        ]
+ [ 0.3815048   0.37544671 -0.01604597 ...  0.          0.
+   0.        ]]
+train_loader: <torch.utils.data.dataloader.DataLoader object at 0x0000017AFDAF2110> 2425
+True
+GRU(
+  (gru): GRU(246, 256, num_layers=2, batch_first=True)
+  (fc): Linear(in_features=256, out_features=250, bias=True)
+)
+Traceback (most recent call last):
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\main.py", line 172, in <module>
+    train(EPOCHS, BATCH_SIZE, model, train_loader, criterion, opt, sched, do_wandb, val_loader, train_data, valid_data, earlystopping )
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\train.py", line 16, in train
+    y_pred = model(x)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\functions.py", line 808, in forward
+    out, _ = self.gru(x, h0)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\nn\modules\rnn.py", line 932, in forward
+    raise RuntimeError(
+RuntimeError: For unbatched 2-D input, hx should also be 2-D but got 3-D tensor

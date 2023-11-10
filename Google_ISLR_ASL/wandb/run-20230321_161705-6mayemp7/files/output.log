@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\main.py", line 63, in <module>
+    left = left.reshape(-1, 10, 126)
+ValueError: cannot reshape array of size 59520510 into shape (10,126)

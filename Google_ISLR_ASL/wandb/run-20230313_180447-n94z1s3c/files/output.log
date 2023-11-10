@@ -1,0 +1,71 @@
+(94477, 504) (94477, 504)
+(94477, 1008)
+[(77585, 1008), (8350, 1008), (8542, 1008)]
+[(77585,), (8350,), (8542,)]
+1008
+train_loader: <torch.utils.data.dataloader.DataLoader object at 0x0000026855DB7A90> 2425
+True
+ASLModel(
+  (dropout): Dropout(p=0.2, inplace=False)
+  (layer0): Linear(in_features=1008, out_features=1024, bias=True)
+  (layer1): Linear(in_features=1024, out_features=512, bias=True)
+  (layer2): Linear(in_features=512, out_features=250, bias=True)
+)
+Epoch:0 > Train Loss: 6.4487, Train Acc: 0.0772
+Epoch:0 > Val Loss: 4.6744, Val Acc: 0.1102
+==================================================
+Epoch:1 > Train Loss: 4.3534, Train Acc: 0.1551
+Epoch:1 > Val Loss: 4.0528, Val Acc: 0.1678
+==================================================
+Epoch:2 > Train Loss: 3.5703, Train Acc: 0.2453
+Epoch:2 > Val Loss: 3.4719, Val Acc: 0.2544
+==================================================
+Epoch:3 > Train Loss: 3.1271, Train Acc: 0.3198
+Epoch:3 > Val Loss: 3.2675, Val Acc: 0.2939
+==================================================
+Epoch:4 > Train Loss: 2.8409, Train Acc: 0.3749
+Epoch:4 > Val Loss: 3.0210, Val Acc: 0.3457
+==================================================
+Epoch:5 > Train Loss: 2.6490, Train Acc: 0.4162
+Epoch:5 > Val Loss: 2.9019, Val Acc: 0.3721
+==================================================
+EarlyStopping counter: 1 out of 5
+Epoch:6 > Train Loss: 2.5080, Train Acc: 0.4483
+Epoch:6 > Val Loss: 2.9257, Val Acc: 0.3691
+==================================================
+EarlyStopping counter: 2 out of 5
+Epoch:7 > Train Loss: 2.3990, Train Acc: 0.4722
+Epoch:7 > Val Loss: 2.7776, Val Acc: 0.3963
+==================================================
+Epoch:8 > Train Loss: 2.3189, Train Acc: 0.4921
+Epoch:8 > Val Loss: 2.7320, Val Acc: 0.4107
+==================================================
+Epoch:9 > Train Loss: 2.2600, Train Acc: 0.5062
+Epoch:9 > Val Loss: 2.7578, Val Acc: 0.4053
+==================================================
+Epoch:10 > Train Loss: 2.2169, Train Acc: 0.5158
+Epoch:10 > Val Loss: 2.7271, Val Acc: 0.4192
+==================================================
+Epoch:11 > Train Loss: 2.1857, Train Acc: 0.5229
+Epoch:11 > Val Loss: 2.7133, Val Acc: 0.4144
+==================================================
+EarlyStopping counter: 1 out of 5
+Epoch:12 > Train Loss: 2.1640, Train Acc: 0.5280
+Epoch:12 > Val Loss: 2.7131, Val Acc: 0.4186
+==================================================
+EarlyStopping counter: 2 out of 5
+Epoch:13 > Train Loss: 2.1505, Train Acc: 0.5316
+Epoch:13 > Val Loss: 2.6937, Val Acc: 0.4272
+==================================================
+EarlyStopping counter: 3 out of 5
+Epoch:14 > Train Loss: 2.1404, Train Acc: 0.5338
+Epoch:14 > Val Loss: 2.6993, Val Acc: 0.4243
+==================================================
+EarlyStopping counter: 4 out of 5
+Epoch:15 > Train Loss: 2.1354, Train Acc: 0.5357
+Epoch:15 > Val Loss: 2.6991, Val Acc: 0.4243
+==================================================
+EarlyStopping counter: 5 out of 5
+Early Stopping!
+best_val_loss: tensor(1.7002, device='cuda:0')
+test Loss: 2.4328, test Acc: 0.4725

@@ -1,0 +1,352 @@
+
+
+left = np.load(f"{BASE_URL}/feature_datas/feature_data_left_4time.npy")
+right = np.load(f"{BASE_URL}/feature_datas/feature_data_right_4time.npy")
+print(left.shape, right.shape)
+datax = np.concatenate([left, right], axis=1)
+model = GetModel(flat_frame_len=trainx.shape[1]).cuda()
+EarlyStopping counter: 14 out of 15
+Epoch:42 > Train Loss: 2.6895, Train Acc: 0.3677
+Epoch:42 > Val Loss: 2.6992, Val Acc: 0.3853
+==================================================
+EarlyStopping counter: 15 out of 15
+Early Stopping!
+best_val_loss: tensor(1.7939, device='cuda:0')
+test Loss: 2.4559, test Acc: 0.4325
+
+
+
+model = ASLModel(p=CONFIG.DROPRATE, INPUT_LENGTH=trainx.shape[1]).cuda()
+EarlyStopping counter: 3 out of 5
+Epoch:14 > Train Loss: 2.1404, Train Acc: 0.5338
+Epoch:14 > Val Loss: 2.6993, Val Acc: 0.4243
+==================================================
+EarlyStopping counter: 4 out of 5
+Epoch:15 > Train Loss: 2.1354, Train Acc: 0.5357
+Epoch:15 > Val Loss: 2.6991, Val Acc: 0.4243
+==================================================
+EarlyStopping counter: 5 out of 5
+Early Stopping!
+best_val_loss: tensor(1.7002, device='cuda:0')
+test Loss: 2.4328, test Acc: 0.4725
+
+
+datax = datax - datax[~torch.isnan(datax)].mean(0,keepdims=True) #noramlisation to common mean
+datax = datax / datax[~torch.isnan(datax)].std(0, keepdims=True)
+EarlyStopping counter: 4 out of 5
+Epoch:9 > Train Loss: 2.1201, Train Acc: 0.5267
+Epoch:9 > Val Loss: 2.7948, Val Acc: 0.3993
+==================================================
+EarlyStopping counter: 5 out of 5
+Early Stopping!
+best_val_loss: tensor(1.7326, device='cuda:0')
+test Loss: 2.5061, test Acc: 0.4522
+=>今のモデルならいらない(transformerとか使うならいるかも?)
+
+
+pose = np.load(f'{BASE_URL}/feature_datas/feature_data_pose_4time.npy')
+EarlyStopping counter: 3 out of 5
+Epoch:16 > Train Loss: 2.1654, Train Acc: 0.5294
+Epoch:16 > Val Loss: 2.7938, Val Acc: 0.4011
+==================================================
+EarlyStopping counter: 4 out of 5
+Epoch:17 > Train Loss: 2.1594, Train Acc: 0.5298
+Epoch:17 > Val Loss: 2.8008, Val Acc: 0.3988
+==================================================
+EarlyStopping counter: 5 out of 5
+Early Stopping!
+best_val_loss: tensor(1.7938, device='cuda:0')
+test Loss: 2.5789, test Acc: 0.4402
+=>testacc 0.47から悪化してるから無駄になってるのかも...
+
+
+
+    lip = np.load(f'{BASE_URL}/feature_datas/feature_data_lip_4time.npy')
+    left = np.load(f"{BASE_URL}/feature_datas/feature_data_left_4time.npy")
+    right = np.load(f"{BASE_URL}/feature_datas/feature_data_right_4time.npy")
+    print(left.shape, right.shape)
+    datax = np.concatenate([lip, left, right], axis=1)
+
+    print(datax.shape)
+    #datax = np.load(f"{BASE_URL}/feature_datas/feature_datas.npy")
+    datay = np.load(f"{BASE_URL}/feature_datas/feature_labels.npy")
+EarlyStopping counter: 4 out of 5
+Epoch:18 > Train Loss: 2.0745, Train Acc: 0.5516
+Epoch:18 > Val Loss: 2.6158, Val Acc: 0.4363
+==================================================
+EarlyStopping counter: 5 out of 5
+Early Stopping!
+best_val_loss: tensor(1.6920, device='cuda:0')
+test Loss: 2.3594, test Acc: 0.4889
+=>0.47からup　今んとこベスト
+
+
+
+
+    lip = np.load(f'{BASE_URL}/feature_datas/feature_data_lip.npy')
+    left = np.load(f"{BASE_URL}/feature_datas/feature_data_left.npy")
+    right = np.load(f"{BASE_URL}/feature_datas/feature_data_right.npy")
+EarlyStopping counter: 3 out of 5
+Epoch:19 > Train Loss: 2.2633, Train Acc: 0.5161
+Epoch:19 > Val Loss: 2.6734, Val Acc: 0.4360
+==================================================
+EarlyStopping counter: 4 out of 5
+Epoch:20 > Train Loss: 2.2637, Train Acc: 0.5162
+Epoch:20 > Val Loss: 2.6750, Val Acc: 0.4356
+==================================================
+EarlyStopping counter: 5 out of 5
+Early Stopping!
+best_val_loss: tensor(1.6576, device='cuda:0')
+test Loss: 2.4609, test Acc: 0.4755
+=>若干悪化くらい。timeがびみょいっぽい。うまくやればもっとあがるはず
+
+
+
+data:10dif_lif, left, right
+model:GRU
+EarlyStopping counter: 8 out of 10
+Epoch:28 > Train Loss: 1.3672, Train Acc: 0.6722
+Epoch:28 > Val Loss: 2.6745, Val Acc: 0.3964
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:29 > Train Loss: 1.3671, Train Acc: 0.6722
+Epoch:29 > Val Loss: 2.6745, Val Acc: 0.3964
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.5950, device='cuda:0')
+Learning Time: 444.96540427207947
+test Loss: 2.3062, test Acc: 0.4547
+=>そこそこ、アンサンブルには使える。dataは平均だけ使ってるから標準偏差も入れた方がいいかも
+あと過学習ぎみなのに注意
+
+
+model:ASLmodelにしただけ
+EarlyStopping counter: 9 out of 10
+Epoch:25 > Train Loss: 2.4450, Train Acc: 0.4666
+Epoch:25 > Val Loss: 2.9640, Val Acc: 0.3559
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.8342, device='cuda:0')
+Learning Time: 328.23518896102905
+test Loss: 2.7117, test Acc: 0.4014
+=>GRUよりかは下。標準偏差を加えてみてみると変わるかも？
+
+
+
+data:5dif_lip, left, rightのmean and stdにしただけ
+EarlyStopping counter: 8 out of 10
+Epoch:24 > Train Loss: 2.3823, Train Acc: 0.4862
+Epoch:24 > Val Loss: 2.9039, Val Acc: 0.3866
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:25 > Train Loss: 2.3810, Train Acc: 0.4868
+Epoch:25 > Val Loss: 2.9039, Val Acc: 0.3863
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.8728, device='cuda:0')
+Learning Time: 427.7775661945343
+test Loss: 2.6590, test Acc: 0.4278
+=>10dif only meanより若干よくなってるけどごみ。4time、dataより下なのが気になる。
+
+
+data:5dif_lip, left, rightのmean and std
+model:GRUにしただけ
+EarlyStopping counter: 8 out of 10
+Epoch:23 > Train Loss: 1.6460, Train Acc: 0.6092
+Epoch:23 > Val Loss: 2.8250, Val Acc: 0.3746
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:24 > Train Loss: 1.6460, Train Acc: 0.6093
+Epoch:24 > Val Loss: 2.8252, Val Acc: 0.3746
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.5582, device='cuda:0')
+Learning Time: 368.04292392730713
+test Loss: 2.5079, test Acc: 0.4240
+=>10dif only meanyより下がってる。なぞ。過学習が原因なのか。
+
+
+
+shoulder data
+ASLmodel
+EarlyStopping counter: 9 out of 10
+Epoch:24 > Train Loss: 1.9443, Train Acc: 0.5772
+Epoch:24 > Val Loss: 2.5066, Val Acc: 0.4517
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.4966, device='cuda:0')
+Learning Time: 258.4936466217041
+                 TENSORFLOW VERSION: 2.11.1
+                 TENSORFLOW VERSION: 2.11.1
+                 TENSORFLOW VERSION: 2.11.1
+                 TENSORFLOW VERSION: 2.11.1
+test Loss: 2.2426, test Acc: 0.5090
+=>今んとこ最強。shoulder data強すぎる
+
+
+
+shoulder data
+GetModel
+LR: 0.000333  #0.005
+sched = torch.optim.lr_scheduler.ReduceLROnPlateau(opt, mode='min', factor=0.8, patience=2, verbose=True)
+
+EarlyStopping counter: 8 out of 10
+Epoch 00032: reducing learning rate of group 0 to 8.7294e-05.
+Epoch:31 > Train Loss: 1.0187, Train Acc: 0.7260, LR: 8.729395200000002e-05
+Epoch:31 > Val Loss: 2.1628, Val Acc: 0.5316
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:32 > Train Loss: 0.9882, Train Acc: 0.7326, LR: 8.729395200000002e-05
+Epoch:32 > Val Loss: 2.1700, Val Acc: 0.5315
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(0.9703, device='cuda:0')
+Learning Time: 401.9163408279419
+test Loss: 1.7439, test Acc: 0.5884
+=>最強。
+
+
+shoulder data seg5
+EarlyStopping counter: 7 out of 10
+Epoch 00030: reducing learning rate of group 0 to 1.0912e-04.
+Epoch:29 > Train Loss: 1.0560, Train Acc: 0.7163, LR: 0.00010911744000000002
+Epoch:29 > Val Loss: 2.3422, Val Acc: 0.5006
+==================================================
+EarlyStopping counter: 8 out of 10
+Epoch:30 > Train Loss: 1.0133, Train Acc: 0.7272, LR: 0.00010911744000000002
+Epoch:30 > Val Loss: 2.2326, Val Acc: 0.5224
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:31 > Train Loss: 0.9998, Train Acc: 0.7303, LR: 0.00010911744000000002
+Epoch:31 > Val Loss: 2.1880, Val Acc: 0.5223
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.0556, device='cuda:0')
+Learning Time: 437.86924862861633
+test Loss: 1.8286, test Acc: 0.5741
+=>微妙に悪くなってる
+
+
+data: 10 reduce feature
+他は上のまま
+
+EarlyStopping counter: 9 out of 10
+Epoch 00043: reducing learning rate of group 0 to 8.7294e-05.
+Epoch:42 > Train Loss: 1.3345, Train Acc: 0.6518, LR: 8.729395200000002e-05
+Epoch:42 > Val Loss: 2.1996, Val Acc: 0.5060
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.0497, device='cuda:0')
+Learning Time: 280.18102073669434
+test Loss: 1.9045, test Acc: 0.5599
+=>悪くないけどbestではない
+
+
+model: ASLModelにしただけ
+EarlyStopping counter: 8 out of 10
+Epoch 00039: reducing learning rate of group 0 to 6.9835e-05.
+Epoch:38 > Train Loss: 2.3751, Train Acc: 0.4796, LR: 6.983516160000002e-05
+Epoch:38 > Val Loss: 2.7234, Val Acc: 0.4060
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:39 > Train Loss: 2.3502, Train Acc: 0.4869, LR: 6.983516160000002e-05
+Epoch:39 > Val Loss: 2.6753, Val Acc: 0.4240
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.5230, device='cuda:0')
+Learning Time: 217.7274489402771
+test Loss: 2.3993, test Acc: 0.4717
+
+
+model: Conv3Dにしただけ
+EarlyStopping counter: 8 out of 10
+Epoch:31 > Train Loss: 1.2442, Train Acc: 0.6968, LR: 8.729395200000002e-05
+Epoch:31 > Val Loss: 2.7275, Val Acc: 0.4529
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch 00033: reducing learning rate of group 0 to 6.9835e-05.
+Epoch:32 > Train Loss: 1.2376, Train Acc: 0.6983, LR: 6.983516160000002e-05
+Epoch:32 > Val Loss: 2.6896, Val Acc: 0.4559
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.1921, device='cuda:0')
+Learning Time: 433.67392444610596
+test Loss: 2.2821, test Acc: 0.5157
+=>微妙。gapとか層を変化させても変わらないから時間方向に畳み込みしないで特徴抽出だけしてみるといいかも
+
+
+model:GRUにしただけ
+EarlyStopping counter: 8 out of 10
+Epoch:21 > Train Loss: 0.8633, Train Acc: 0.7857, LR: 0.00021312000000000002
+Epoch:21 > Val Loss: 2.7135, Val Acc: 0.4338
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch 00023: reducing learning rate of group 0 to 1.7050e-04.
+Epoch:22 > Train Loss: 0.8283, Train Acc: 0.7935, LR: 0.00017049600000000002
+Epoch:22 > Val Loss: 2.7029, Val Acc: 0.4331
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.3128, device='cuda:0')
+Learning Time: 204.85685920715332
+test Loss: 2.2221, test Acc: 0.4979
+=>めっちゃ過学習してる。前にやったGRUは全部過学習したからモデルが悪いかも
+
+
+
+GRUを二層にして、ドロップアウトを二回やった
+EarlyStopping counter: 8 out of 10
+Epoch:24 > Train Loss: 0.6135, Train Acc: 0.8426, LR: 0.00013639680000000003
+Epoch:24 > Val Loss: 2.5955, Val Acc: 0.4698
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch 00026: reducing learning rate of group 0 to 1.0912e-04.
+Epoch:25 > Train Loss: 0.5926, Train Acc: 0.8485, LR: 0.00010911744000000002
+Epoch:25 > Val Loss: 2.5629, Val Acc: 0.4778
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.1639, device='cuda:0')
+Learning Time: 378.833215713501
+test Loss: 2.1162, test Acc: 0.5441
+=>過学習してる。入力する特徴がよくないのかも
+
+model:conv1DGRUにした
+EarlyStopping counter: 8 out of 10
+Epoch:17 > Train Loss: 0.4375, Train Acc: 0.8849, LR: 0.00013639680000000003
+Epoch:17 > Val Loss: 2.3884, Val Acc: 0.5225
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:18 > Train Loss: 0.4052, Train Acc: 0.8936, LR: 0.00013639680000000003
+Epoch:18 > Val Loss: 2.4965, Val Acc: 0.5153
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(0.9896, device='cuda:0')
+Learning Time: 295.3633334636688
+test Loss: 1.9135, test Acc: 0.5975
+
+ハイパラちょいがえ
+EarlyStopping counter: 8 out of 10
+Epoch:21 > Train Loss: 1.0294, Train Acc: 0.7285, LR: 0.00013639680000000003
+Epoch:21 > Val Loss: 2.0883, Val Acc: 0.5399
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:22 > Train Loss: 1.0152, Train Acc: 0.7327, LR: 0.00013639680000000003
+Epoch:22 > Val Loss: 2.1850, Val Acc: 0.5238
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(0.9565, device='cuda:0')
+Learning Time: 355.6458213329315
+test Loss: 1.7119, test Acc: 0.5967

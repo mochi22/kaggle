@@ -1,0 +1,151 @@
+(94477, 10, 120) (94477, 10, 63) (94477, 10, 63)
+(94477, 10, 246)
+<class 'numpy.ndarray'> <class 'numpy.ndarray'>
+[(94477, 10, 246), (94477,)]
+None
+[(77585, 10, 246), (8350, 10, 246), (8542, 10, 246)]
+[(77585,), (8350,), (8542,)]
+[[[ 4.67521012e-01  3.92403483e-01  1.36448704e-02 ...  4.01093692e-01
+    3.91999066e-01 -7.06233382e-02]
+  [ 4.65273440e-01  3.96669030e-01  1.64715275e-02 ...  4.38640982e-01
+    3.80609751e-01 -5.41826002e-02]
+  [ 4.82647777e-01  3.97803724e-01  1.73950493e-02 ...  4.42866981e-01
+    3.82043660e-01 -7.98644274e-02]
+  ...
+  [ 5.11390686e-01  3.96833271e-01  1.53533393e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 5.08696795e-01  3.97768974e-01  1.61361950e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 5.07447839e-01  3.97225887e-01  1.40921492e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]]
+ [[ 5.20562828e-01  5.23632705e-01 -7.18949456e-03 ...  3.78849626e-01
+    4.87079889e-01 -1.05738685e-01]
+  [ 5.17362833e-01  5.20749092e-01 -5.66144194e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 5.18603206e-01  5.20824373e-01 -6.37484156e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  ...
+  [ 4.99292612e-01  5.21909118e-01 -9.16770566e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.91779625e-01  5.18710196e-01 -1.18135093e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.90872860e-01  5.17320335e-01 -8.89495015e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]]
+ [[ 4.39112067e-01  5.52334905e-01 -6.64041610e-03 ...  1.85525224e-01
+    7.41646528e-01 -4.77985665e-02]
+  [ 4.44048256e-01  5.47705293e-01 -5.28525561e-03 ...  1.56737328e-01
+    7.34309793e-01 -5.76096252e-02]
+  [ 4.47527319e-01  5.46965480e-01 -6.43561129e-03 ...  2.42063865e-01
+    7.29911327e-01 -5.57842776e-02]
+  ...
+  [ 4.58184063e-01  5.43513000e-01 -9.24812816e-03 ...  2.14009047e-01
+    7.10102499e-01 -5.48707433e-02]
+  [ 4.59129304e-01  5.41409612e-01 -6.99981721e-03 ...  2.06549913e-01
+    7.01998174e-01 -4.25447188e-02]
+  [ 4.62049842e-01  5.41186273e-01 -5.89763839e-03 ...  2.58419394e-01
+    7.12684155e-01 -5.34521677e-02]]
+ ...
+ [[ 4.79570329e-01  3.60501349e-01  2.73153954e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.78081405e-01  3.60182554e-01  1.74500351e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.77429450e-01  3.59742016e-01  1.35115231e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  ...
+  [ 4.78081405e-01  3.60182554e-01  1.74500351e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.77429450e-01  3.59742016e-01  1.35115231e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.77993906e-01  3.59843016e-01  1.92030752e-03 ...  2.96885997e-01
+    6.26876116e-01  1.65453881e-01]]
+ [[ 4.15573359e-01  4.94735986e-01  1.66830327e-03 ...  3.70049059e-01
+    7.69953489e-01 -8.06361884e-02]
+  [ 4.23389286e-01  5.02726376e-01  4.44235513e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.25409764e-01  5.23025095e-01  4.27673850e-03 ...  3.90887499e-01
+    8.04830909e-01 -1.09317109e-01]
+  ...
+  [ 4.30281281e-01  5.14697492e-01  4.25663980e-04 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.24206972e-01  5.11104703e-01  2.18534446e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.22115564e-01  5.25718629e-01  1.48029858e-03 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]]
+ [[ 3.83232445e-01  3.77185464e-01 -1.57158412e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 3.79777223e-01  3.73707920e-01 -1.63760930e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 3.79922062e-01  3.71459275e-01 -1.61109883e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  ...
+  [ 3.92555863e-01  3.79994869e-01 -1.57934483e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 3.94882947e-01  3.74345690e-01 -1.45423813e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]
+  [ 4.04731154e-01  3.72572184e-01 -1.76321659e-02 ...  0.00000000e+00
+    0.00000000e+00  0.00000000e+00]]]
+train_loader: <torch.utils.data.dataloader.DataLoader object at 0x00000200CF83BA60> 2425
+True
+GRU(
+  (gru): GRU(246, 128, num_layers=4, batch_first=True)
+  (fc): Linear(in_features=128, out_features=250, bias=True)
+)
+Epoch:0 > Train Loss: 5.5528, Train Acc: 0.0036
+Epoch:0 > Val Loss: 5.5339, Val Acc: 0.0043
+==================================================
+Epoch:1 > Train Loss: 5.5308, Train Acc: 0.0037
+Epoch:1 > Val Loss: 5.5252, Val Acc: 0.0047
+==================================================
+Epoch:2 > Train Loss: 5.5281, Train Acc: 0.0038
+Epoch:2 > Val Loss: 5.5196, Val Acc: 0.0047
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:3 > Train Loss: 5.2352, Train Acc: 0.0150
+Epoch:3 > Val Loss: 4.8678, Val Acc: 0.0315
+==================================================
+Epoch:4 > Train Loss: 4.4457, Train Acc: 0.0697
+Epoch:4 > Val Loss: 4.4049, Val Acc: 0.0756
+==================================================
+Epoch:5 > Train Loss: 4.1063, Train Acc: 0.1148
+Epoch:5 > Val Loss: 4.2388, Val Acc: 0.0956
+==================================================
+Epoch:6 > Train Loss: 3.9271, Train Acc: 0.1438
+Epoch:6 > Val Loss: 4.1562, Val Acc: 0.1134
+==================================================
+Epoch:7 > Train Loss: 3.8013, Train Acc: 0.1640
+Epoch:7 > Val Loss: 4.0873, Val Acc: 0.1217
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:8 > Train Loss: 3.7091, Train Acc: 0.1806
+Epoch:8 > Val Loss: 4.0777, Val Acc: 0.1278
+==================================================
+EarlyStopping counter: 2 out of 10
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x00000200ACC8D510>
+Traceback (most recent call last):
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 1466, in __del__
+    self._shutdown_workers()
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 1430, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\multiprocessing\process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\multiprocessing\popen_spawn_win32.py", line 108, in wait
+    res = _winapi.WaitForSingleObject(int(self._handle), msecs)
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\main.py", line 172, in <module>
+    train(EPOCHS, BATCH_SIZE, model, train_loader, criterion, opt, sched, do_wandb, val_loader, train_data, valid_data, earlystopping )
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\train.py", line 21, in train
+    opt.step()
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\lr_scheduler.py", line 68, in wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\adam.py", line 234, in step
+    adam(params_with_grad,
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\adam.py", line 300, in adam
+    func(params,
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\adam.py", line 363, in _single_tensor_adam
+    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+KeyboardInterrupt

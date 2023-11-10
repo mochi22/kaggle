@@ -1,0 +1,74 @@
+[(77585, 3258), (8350, 3258), (8542, 3258)]
+[(77585,), (8350,), (8542,)]
+Epoch:0 > Train Loss: 79.7933, Train Acc: 0.0170
+Epoch:0 > Val Loss: 96.4480, Val Acc: 0.0072
+==================================================
+Epoch:1 > Train Loss: 12.5448, Train Acc: 0.0527
+Epoch:1 > Val Loss: 4.6457, Val Acc: 0.0831
+==================================================
+Epoch:2 > Train Loss: 4.5136, Train Acc: 0.1051
+Epoch:2 > Val Loss: 4.4302, Val Acc: 0.0986
+==================================================
+Epoch:3 > Train Loss: 4.4152, Train Acc: 0.1157
+Epoch:3 > Val Loss: 4.6423, Val Acc: 0.0853
+==================================================
+Epoch:4 > Train Loss: 4.5796, Train Acc: 0.1126
+Epoch:4 > Val Loss: 4.6611, Val Acc: 0.1036
+==================================================
+Epoch:5 > Train Loss: 4.4354, Train Acc: 0.1291
+Epoch:5 > Val Loss: 4.3823, Val Acc: 0.1206
+==================================================
+Epoch:6 > Train Loss: 4.1474, Train Acc: 0.1549
+Epoch:6 > Val Loss: 4.1404, Val Acc: 0.1461
+==================================================
+Epoch:7 > Train Loss: 3.8620, Train Acc: 0.1844
+Epoch:7 > Val Loss: 3.8420, Val Acc: 0.1721
+==================================================
+Epoch:8 > Train Loss: 3.6076, Train Acc: 0.2219
+Epoch:8 > Val Loss: 3.7930, Val Acc: 0.1975
+==================================================
+Epoch:9 > Train Loss: 3.4154, Train Acc: 0.2541
+Epoch:9 > Val Loss: 3.6410, Val Acc: 0.2195
+==================================================
+Epoch:10 > Train Loss: 3.2454, Train Acc: 0.2864
+Epoch:10 > Val Loss: 3.5651, Val Acc: 0.2477
+==================================================
+Epoch:11 > Train Loss: 3.1142, Train Acc: 0.3137
+Epoch:11 > Val Loss: 3.4392, Val Acc: 0.2544
+==================================================
+Epoch:12 > Train Loss: 2.9941, Train Acc: 0.3395
+Epoch:12 > Val Loss: 3.1379, Val Acc: 0.3062
+==================================================
+Epoch:13 > Train Loss: 2.8837, Train Acc: 0.3647
+Epoch:13 > Val Loss: 3.1774, Val Acc: 0.3078
+==================================================
+Epoch:14 > Train Loss: 2.7980, Train Acc: 0.3848
+Epoch:14 > Val Loss: 3.2020, Val Acc: 0.3085
+==================================================
+Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x0000019E6F689360>
+Traceback (most recent call last):
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 1466, in __del__
+    self._shutdown_workers()
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 1430, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\multiprocessing\process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\multiprocessing\popen_spawn_win32.py", line 108, in wait
+    res = _winapi.WaitForSingleObject(int(self._handle), msecs)
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "C:\Users\ryu91\kaggle\Google_ISLR_ASL\main.py", line 91, in <module>
+    x = torch.Tensor(x).float().cuda()
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\lr_scheduler.py", line 68, in wrapper
+    return wrapped(*args, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\adam.py", line 234, in step
+    adam(params_with_grad,
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\adam.py", line 300, in adam
+    func(params,
+  File "C:\Users\ryu91\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\optim\adam.py", line 364, in _single_tensor_adam
+    exp_avg_sq.mul_(beta2).addcmul_(grad, grad.conj(), value=1 - beta2)
+KeyboardInterrupt

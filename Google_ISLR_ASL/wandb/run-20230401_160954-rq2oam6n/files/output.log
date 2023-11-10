@@ -1,0 +1,206 @@
+(94477, 630)
+<class 'numpy.ndarray'> <class 'numpy.ndarray'>
+[(94477, 630), (94477,)]
+None
+[(77585, 630), (8350, 630), (8542, 630)]
+[(77585,), (8350,), (8542,)]
+[[ 3.17081988e-01  5.76334476e-01  2.27353283e-07 ...  1.20884500e-01
+   4.42136198e-01 -1.81898713e-01]
+ [ 6.62426800e-02  5.45300186e-01  8.90328408e-07 ...  3.81433070e-01
+   8.03320467e-01 -1.06972300e-01]
+ [ 1.56401113e-01  8.35049629e-01  3.99075788e-07 ...  2.58419394e-01
+   7.12684155e-01 -5.34521677e-02]
+ ...
+ [ 6.69822395e-02  6.45928085e-01  1.45185183e-07 ...  2.96148121e-01
+   6.31948471e-01  2.10460469e-01]
+ [ 1.28062174e-01  7.91996360e-01  5.17556259e-07 ...  4.10599470e-01
+   8.00608754e-01 -1.40931338e-01]
+ [-7.58743346e-01  7.17859745e-01  2.45012103e-07 ... -4.11341667e-01
+   7.00125754e-01 -5.91582879e-02]]
+<functions.ASLData object at 0x000001E0CD3616F0>
+train_loader: <torch.utils.data.dataloader.DataLoader object at 0x000001E0CD7631F0> 2425
+True
+ASLModel(
+  (dropout): Dropout(p=0.2, inplace=False)
+  (layer0): Linear(in_features=630, out_features=1024, bias=True)
+  (layer1): Linear(in_features=1024, out_features=512, bias=True)
+  (layer2): Linear(in_features=512, out_features=250, bias=True)
+)
+[tensor([[-7.2985e-01,  6.2833e-01, -5.3492e-07,  ..., -6.8822e-01,
+          5.4104e-01, -3.8549e-02],
+        [-8.3125e-01,  6.3722e-01, -3.9959e-08,  ..., -6.7056e-01,
+          7.8808e-01, -9.4878e-02],
+        [ 3.4083e-02,  6.4971e-01,  3.3125e-07,  ...,  2.7819e-01,
+          3.6878e-01, -1.5740e-02],
+        ...,
+        [-8.3790e-01,  6.0942e-01, -6.8541e-07,  ..., -4.5519e-01,
+          6.3595e-01, -1.5136e-01],
+        [-7.8035e-01,  6.5878e-01,  8.1209e-07,  ..., -5.8420e-01,
+          7.0313e-01, -6.4603e-03],
+        [ 1.8568e-01,  7.7250e-01,  2.9580e-07,  ...,  5.2920e-01,
+          7.0035e-01,  2.3355e-02]], dtype=torch.float64), tensor([195.,  22., 182., 173.,  44., 225.,  80., 171., 169.,  59.,  10., 119.,
+          8.,  55., 144., 139., 148., 185., 199., 150., 185., 172.,   7., 122.,
+        193.,  84., 175., 106.,  62., 213.,  27.,  72.], dtype=torch.float64)]
+Epoch:0 > Train Loss: 4.2535, Train Acc: 0.1287, LR: 0.000333
+Epoch:0 > Val Loss: 3.7565, Val Acc: 0.1801
+==================================================
+Epoch:1 > Train Loss: 3.4179, Train Acc: 0.2656, LR: 0.000333
+Epoch:1 > Val Loss: 3.2512, Val Acc: 0.2923
+==================================================
+Epoch:2 > Train Loss: 3.1908, Train Acc: 0.3092, LR: 0.000333
+Epoch:2 > Val Loss: 3.2786, Val Acc: 0.2909
+==================================================
+Epoch:3 > Train Loss: 3.0824, Train Acc: 0.3335, LR: 0.000333
+Epoch:3 > Val Loss: 3.0221, Val Acc: 0.3444
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:4 > Train Loss: 3.0171, Train Acc: 0.3451, LR: 0.000333
+Epoch:4 > Val Loss: 3.1279, Val Acc: 0.3196
+==================================================
+Epoch:5 > Train Loss: 2.9717, Train Acc: 0.3522, LR: 0.000333
+Epoch:5 > Val Loss: 3.0898, Val Acc: 0.3241
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch 00007: reducing learning rate of group 0 to 2.6640e-04.
+Epoch:6 > Train Loss: 2.9335, Train Acc: 0.3606, LR: 0.0002664
+Epoch:6 > Val Loss: 3.3717, Val Acc: 0.2772
+==================================================
+EarlyStopping counter: 2 out of 10
+Epoch:7 > Train Loss: 2.8395, Train Acc: 0.3811, LR: 0.0002664
+Epoch:7 > Val Loss: 3.0476, Val Acc: 0.3371
+==================================================
+EarlyStopping counter: 3 out of 10
+Epoch:8 > Train Loss: 2.8115, Train Acc: 0.3874, LR: 0.0002664
+Epoch:8 > Val Loss: 2.9121, Val Acc: 0.3707
+==================================================
+EarlyStopping counter: 4 out of 10
+Epoch:9 > Train Loss: 2.7938, Train Acc: 0.3892, LR: 0.0002664
+Epoch:9 > Val Loss: 2.9048, Val Acc: 0.3593
+==================================================
+Epoch:10 > Train Loss: 2.7722, Train Acc: 0.3948, LR: 0.0002664
+Epoch:10 > Val Loss: 2.8745, Val Acc: 0.3770
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:11 > Train Loss: 2.7586, Train Acc: 0.3963, LR: 0.0002664
+Epoch:11 > Val Loss: 2.8724, Val Acc: 0.3704
+==================================================
+EarlyStopping counter: 2 out of 10
+Epoch:12 > Train Loss: 2.7363, Train Acc: 0.3995, LR: 0.0002664
+Epoch:12 > Val Loss: 2.8941, Val Acc: 0.3583
+==================================================
+EarlyStopping counter: 3 out of 10
+Epoch:13 > Train Loss: 2.7234, Train Acc: 0.4030, LR: 0.0002664
+Epoch:13 > Val Loss: 2.8888, Val Acc: 0.3649
+==================================================
+EarlyStopping counter: 4 out of 10
+Epoch 00015: reducing learning rate of group 0 to 2.1312e-04.
+Epoch:14 > Train Loss: 2.7037, Train Acc: 0.4066, LR: 0.00021312000000000002
+Epoch:14 > Val Loss: 2.9040, Val Acc: 0.3663
+==================================================
+EarlyStopping counter: 5 out of 10
+Epoch:15 > Train Loss: 2.6413, Train Acc: 0.4219, LR: 0.00021312000000000002
+Epoch:15 > Val Loss: 2.8632, Val Acc: 0.3749
+==================================================
+Epoch:16 > Train Loss: 2.6290, Train Acc: 0.4245, LR: 0.00021312000000000002
+Epoch:16 > Val Loss: 2.8347, Val Acc: 0.3873
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:17 > Train Loss: 2.6167, Train Acc: 0.4265, LR: 0.00021312000000000002
+Epoch:17 > Val Loss: 2.8344, Val Acc: 0.3793
+==================================================
+EarlyStopping counter: 2 out of 10
+Epoch:18 > Train Loss: 2.6120, Train Acc: 0.4307, LR: 0.00021312000000000002
+Epoch:18 > Val Loss: 2.8810, Val Acc: 0.3714
+==================================================
+EarlyStopping counter: 3 out of 10
+Epoch:19 > Train Loss: 2.6069, Train Acc: 0.4268, LR: 0.00021312000000000002
+Epoch:19 > Val Loss: 2.8462, Val Acc: 0.3875
+==================================================
+EarlyStopping counter: 4 out of 10
+Epoch 00021: reducing learning rate of group 0 to 1.7050e-04.
+Epoch:20 > Train Loss: 2.5940, Train Acc: 0.4304, LR: 0.00017049600000000002
+Epoch:20 > Val Loss: 2.9078, Val Acc: 0.3732
+==================================================
+EarlyStopping counter: 5 out of 10
+Epoch:21 > Train Loss: 2.5462, Train Acc: 0.4423, LR: 0.00017049600000000002
+Epoch:21 > Val Loss: 2.7524, Val Acc: 0.3944
+==================================================
+Epoch:22 > Train Loss: 2.5379, Train Acc: 0.4447, LR: 0.00017049600000000002
+Epoch:22 > Val Loss: 2.8568, Val Acc: 0.3702
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:23 > Train Loss: 2.5352, Train Acc: 0.4438, LR: 0.00017049600000000002
+Epoch:23 > Val Loss: 2.7164, Val Acc: 0.4156
+==================================================
+EarlyStopping counter: 2 out of 10
+Epoch:24 > Train Loss: 2.5254, Train Acc: 0.4455, LR: 0.00017049600000000002
+Epoch:24 > Val Loss: 2.7575, Val Acc: 0.3987
+==================================================
+EarlyStopping counter: 3 out of 10
+Epoch:25 > Train Loss: 2.5198, Train Acc: 0.4484, LR: 0.00017049600000000002
+Epoch:25 > Val Loss: 2.8475, Val Acc: 0.3880
+==================================================
+EarlyStopping counter: 4 out of 10
+Epoch 00027: reducing learning rate of group 0 to 1.3640e-04.
+Epoch:26 > Train Loss: 2.5175, Train Acc: 0.4473, LR: 0.00013639680000000003
+Epoch:26 > Val Loss: 2.7340, Val Acc: 0.4083
+==================================================
+EarlyStopping counter: 5 out of 10
+Epoch:27 > Train Loss: 2.4716, Train Acc: 0.4582, LR: 0.00013639680000000003
+Epoch:27 > Val Loss: 2.7750, Val Acc: 0.4053
+==================================================
+EarlyStopping counter: 6 out of 10
+Epoch:28 > Train Loss: 2.4720, Train Acc: 0.4592, LR: 0.00013639680000000003
+Epoch:28 > Val Loss: 2.7420, Val Acc: 0.4066
+==================================================
+EarlyStopping counter: 7 out of 10
+Epoch:29 > Train Loss: 2.4661, Train Acc: 0.4618, LR: 0.00013639680000000003
+Epoch:29 > Val Loss: 2.6805, Val Acc: 0.4251
+==================================================
+Epoch:30 > Train Loss: 2.4608, Train Acc: 0.4611, LR: 0.00013639680000000003
+Epoch:30 > Val Loss: 2.7306, Val Acc: 0.4134
+==================================================
+EarlyStopping counter: 1 out of 10
+Epoch:31 > Train Loss: 2.4573, Train Acc: 0.4623, LR: 0.00013639680000000003
+Epoch:31 > Val Loss: 2.7152, Val Acc: 0.4133
+==================================================
+EarlyStopping counter: 2 out of 10
+Epoch 00033: reducing learning rate of group 0 to 1.0912e-04.
+Epoch:32 > Train Loss: 2.4533, Train Acc: 0.4613, LR: 0.00010911744000000002
+Epoch:32 > Val Loss: 2.7246, Val Acc: 0.4084
+==================================================
+EarlyStopping counter: 3 out of 10
+Epoch:33 > Train Loss: 2.4167, Train Acc: 0.4718, LR: 0.00010911744000000002
+Epoch:33 > Val Loss: 2.6964, Val Acc: 0.4125
+==================================================
+EarlyStopping counter: 4 out of 10
+Epoch:34 > Train Loss: 2.4144, Train Acc: 0.4708, LR: 0.00010911744000000002
+Epoch:34 > Val Loss: 2.7075, Val Acc: 0.4098
+==================================================
+EarlyStopping counter: 5 out of 10
+Epoch 00036: reducing learning rate of group 0 to 8.7294e-05.
+Epoch:35 > Train Loss: 2.4133, Train Acc: 0.4705, LR: 8.729395200000002e-05
+Epoch:35 > Val Loss: 2.7058, Val Acc: 0.4090
+==================================================
+EarlyStopping counter: 6 out of 10
+Epoch:36 > Train Loss: 2.3822, Train Acc: 0.4784, LR: 8.729395200000002e-05
+Epoch:36 > Val Loss: 2.7003, Val Acc: 0.4123
+==================================================
+EarlyStopping counter: 7 out of 10
+Epoch:37 > Train Loss: 2.3785, Train Acc: 0.4798, LR: 8.729395200000002e-05
+Epoch:37 > Val Loss: 2.7314, Val Acc: 0.4085
+==================================================
+EarlyStopping counter: 8 out of 10
+Epoch 00039: reducing learning rate of group 0 to 6.9835e-05.
+Epoch:38 > Train Loss: 2.3751, Train Acc: 0.4796, LR: 6.983516160000002e-05
+Epoch:38 > Val Loss: 2.7234, Val Acc: 0.4060
+==================================================
+EarlyStopping counter: 9 out of 10
+Epoch:39 > Train Loss: 2.3502, Train Acc: 0.4869, LR: 6.983516160000002e-05
+Epoch:39 > Val Loss: 2.6753, Val Acc: 0.4240
+==================================================
+EarlyStopping counter: 10 out of 10
+Early Stopping!
+best_val_loss: tensor(1.5230, device='cuda:0')
+Learning Time: 217.7274489402771
+test Loss: 2.3993, test Acc: 0.4717

@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.10.8",
+    "heartbeatAt": "2023-03-21T07:15:50.394937",
+    "startedAt": "2023-03-21T07:15:49.811216",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\ryu91\\kaggle\\Google_ISLR_ASL\\main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": null,
+        "commit": null
+    },
+    "email": "jdhdbemd@gmail.com",
+    "root": "C:/Users/ryu91/kaggle/Google_ISLR_ASL",
+    "host": "STORM-PC",
+    "username": "ryu91",
+    "executable": "C:\\Users\\ryu91\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2500.0,
+        "min": 0.0,
+        "max": 2500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2500.0,
+            "min": 0.0,
+            "max": 2500.0
+        }
+    ],
+    "disk": {
+        "total": 465.02636337280273,
+        "used": 326.90674209594727
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Ti",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 15.792839050292969
+    }
+}
