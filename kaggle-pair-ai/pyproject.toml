@@ -1,0 +1,14 @@
+[project]
+name = "kaggle-pair-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "kaggle>=1.7.4.2",
+    "requests>=2.32.3",
+    "selenium>=4.31.0",
+    "streamlit>=1.44.1",
+    "webdriver-manager>=4.0.2",
+]
